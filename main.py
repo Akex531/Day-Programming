@@ -1,12 +1,14 @@
 while True:    
-    # 1. Obtener la entrada del usuario
-    numBin: str = input("Ingresa un numero binario de 8 digitos:\n")
+    # 1. Obtener la entrada del usuario y saber la cantidad de digitos a ingresar
+    numero_digitos: int = int(input("¿Cuantos digitos quieres ingresar?:\n"))
+
+    numBin: str = input(f"Ingresa un numero binario de {numero_digitos} digitos:\n")
 
     # 2. Verificar la entrada: tamaño, todos los caracteres numericos, todos los valores son 1 o 0
     es_valido = True
     tamañoString: int = len(numBin)
 
-    if tamañoString > 8 or tamañoString < 8:
+    if tamañoString > numero_digitos or tamañoString < numero_digitos:
         print("Debes de ingresar un numero que no supere los 8 digitos o que no sea menor a 8.")
         es_valido = False
     else:
